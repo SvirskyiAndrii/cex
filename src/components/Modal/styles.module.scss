@@ -1,0 +1,36 @@
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(22, 22, 49, 0.9);
+  z-index: 2;
+}
+
+.modalBody {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 552px;
+  height: 728px;
+  background: #24244f;
+  color: white;
+  .close {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 46px;
+    right: 50px;
+    background-image: url('../../assets/img/close.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

@@ -1,0 +1,98 @@
+.container {
+  height: 247px;
+  margin-right: 3px;
+  background: #161631;
+  font-family: 'Roboto';
+  .ordersHeader {
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .title {
+      display: flex;
+      align-items: center;
+      width: calc(120px - 30px);
+      height: 45px;
+      background: #1b1b3b;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      padding: 0 0 0 30px;
+    }
+    & .bell {
+      margin: 0 15px 0 0;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  .tableHeader {
+    height: 36px;
+    padding: 0 19px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    background: #1b1b3b;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    .sort {
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 65px;
+        top: 3px;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 10px solid rgba(255, 255, 255, 0.6);
+      }
+    }
+    .cancel {
+      cursor: pointer;
+      user-select: none;
+      min-width: 85px;
+      color: #22bc7b;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 75px;
+        width: 16px;
+        height: 16px;
+        background-image: url('../../../assets/img/info.svg');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .tableContent {
+    position: relative;
+    height: 168px;
+
+    .noData {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 168px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+    .paragraph {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 30px;
+      bottom: 6px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      & .info {
+        margin: 0 0 0 6px;
+      }
+    }
+  }
+}

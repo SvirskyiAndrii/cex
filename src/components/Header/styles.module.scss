@@ -1,0 +1,40 @@
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 150px 150px 120px 120px 120px 120px 120px 1fr;
+  padding: 15px 30px;
+  font-size: 14px;
+  background: #161631;
+  margin-bottom: 3px;
+
+  .infoBlock {
+    .positive {
+      color: #0c9e12;
+    }
+    .negative {
+      color: #b03b3b;
+    }
+
+    .title {
+      font-style: normal;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .login {
+    justify-self: end;
+    padding: 7px 20px;
+    border: 0;
+    background: #5b549d;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+    border-radius: 4px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.inputWrapper {
+  .input {
+    border-style: none;
+    width: calc(452px - 30px);
+    padding: 0 15px;
+    height: 54px;
+    background: #2c2c61;
+    border-radius: 3px;
+    outline: none;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.9);
+    &::placeholder {
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.02em;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    &:focus {
+      border: 1px solid #5b549d;
+    }
+    &.error {
+      border: 1px solid #ff5454;
+    }
+  }
+  .errorMAssege {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 84, 84, 0.8);
+    margin: 10px 0 0 0;
+  }
+}
