@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cex/static/css/main.daf95462.css",
-    "main.js": "/cex/static/js/main.d5df43a0.js",
+    "main.css": "/cex/static/css/main.a5ee80ac.css",
+    "main.js": "/cex/static/js/main.7832e95d.js",
     "static/media/bell.svg": "/cex/static/media/bell.04e5a76797168fcf293f84b181bfa811.svg",
     "static/media/eye-off.svg": "/cex/static/media/eye-off.4f9df4b59bfd36be44e1dce34b1c1751.svg",
     "static/media/eye.svg": "/cex/static/media/eye.8a0628be82f68f7ddab9337203d88f72.svg",
@@ -11,11 +11,11 @@
     "static/media/close.svg": "/cex/static/media/close.1f466115643f66397ce7.svg",
     "static/media/check.svg": "/cex/static/media/check.7f5de10ca57224c9c27c.svg",
     "static/media/referral-arrow.svg": "/cex/static/media/referral-arrow.74bbe34c9c98005d93e0.svg",
-    "main.daf95462.css.map": "/cex/static/css/main.daf95462.css.map",
-    "main.d5df43a0.js.map": "/cex/static/js/main.d5df43a0.js.map"
+    "main.a5ee80ac.css.map": "/cex/static/css/main.a5ee80ac.css.map",
+    "main.7832e95d.js.map": "/cex/static/js/main.7832e95d.js.map"
   },
   "entrypoints": [
-    "static/css/main.daf95462.css",
-    "static/js/main.d5df43a0.js"
+    "static/css/main.a5ee80ac.css",
+    "static/js/main.7832e95d.js"
   ]
 }
