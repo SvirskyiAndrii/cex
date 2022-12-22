@@ -1,6 +1,9 @@
 .inputWrapper {
+  display: flex;
+  flex-direction: column;
   .input {
     border-style: none;
+    border: 1px solid transparent;
     width: calc(452px - 30px);
     padding: 0 15px;
     height: 54px;
@@ -28,7 +31,7 @@
       border: 1px solid #ff5454;
     }
   }
-  .errorMAssege {
+  .errorMessage {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 15px;

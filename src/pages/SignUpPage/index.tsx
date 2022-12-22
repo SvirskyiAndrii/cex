@@ -43,7 +43,7 @@ export const SignUpPage = ({ signIn }: any) => {
           id='signup-password'
           placeholder='Password'
           status={''}
-          value={data.email}
+          value={data.password}
           type={showPassword ? 'text' : 'password'}
           onChange={(e: { target: { value: any } }) => {
             const { email } = data;

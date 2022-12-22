@@ -23,7 +23,7 @@ export const Input = ({
     <div className={styles.inputWrapper}>
       <input
         id={id}
-        className={`${styles.input} ${styles[status]}`}
+        className={`${styles.input} ${error ? styles.error : ''}`}
         type={type}
         placeholder={placeholder}
         onChange={onChange}

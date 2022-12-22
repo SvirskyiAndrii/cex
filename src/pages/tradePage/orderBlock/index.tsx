@@ -13,6 +13,11 @@ export const OrderBlock = () => {
   const [buyOrders, setBuyOrders] = useState<OrderProps[]>([]);
   const [decimal, setDecimal] = useState<any>('1 decimal');
   const [openedDecimal, setOpenedDecimal] = useState(false);
+  const [firstLimit, setFirstLimit] = useState<any>({ from: null, to: null });
+  const [secondLimit, setSecondLimit] = useState<any>({ from: null, to: null });
+
+  const blockInvalidChar = (e: any) =>
+    ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault();
 
   useEffect(() => {
     setTimeout(() => {
@@ -154,11 +159,43 @@ export const OrderBlock = () => {
                 type='number'
                 placeholder='Price'
                 className={styles.input}
+                value={firstLimit.from}
+                onKeyDown={blockInvalidChar}
+                onChange={(e) => {
+                  const { to } = firstLimit;
+                  const limitFrom = e.target.value;
+                  setFirstLimit({
+                    to,
+                    from: limitFrom ? Number(limitFrom) : null,
+                  });
+                }}
               />
               <div className={styles.currency}>USDT</div>
               <div className={styles.buttons}>
-                <button>+</button>
-                <button>-</button>
+                <button
+                  onClick={() => {
+                    const { to } = firstLimit;
+                    const from = firstLimit.from + 1;
+                    setFirstLimit({
+                      to,
+                      from,
+                    });
+                  }}
+                >
+                  +
+                </button>
+                <button
+                  onClick={() => {
+                    const { to } = firstLimit;
+                    const from = firstLimit.from - 1;
+                    setFirstLimit({
+                      to,
+                      from,
+                    });
+                  }}
+                >
+                  -
+                </button>
               </div>
             </div>
             <div className={styles.inputContainer}>
@@ -166,11 +203,43 @@ export const OrderBlock = () => {
                 type='number'
                 placeholder='Price'
                 className={styles.input}
+                value={firstLimit.to}
+                onKeyDown={blockInvalidChar}
+                onChange={(e) => {
+                  const { from } = firstLimit;
+                  const limitTo = e.target.value;
+                  setFirstLimit({
+                    from,
+                    to: limitTo ? Number(limitTo) : null,
+                  });
+                }}
               />
               <div className={styles.currency}>USDT</div>
               <div className={styles.buttons}>
-                <button>+</button>
-                <button>-</button>
+                <button
+                  onClick={() => {
+                    const { from } = firstLimit;
+                    const to = firstLimit.to + 1;
+                    setFirstLimit({
+                      to,
+                      from,
+                    });
+                  }}
+                >
+                  +
+                </button>
+                <button
+                  onClick={() => {
+                    const { from } = firstLimit;
+                    const to = firstLimit.to - 1;
+                    setFirstLimit({
+                      to,
+                      from,
+                    });
+                  }}
+                >
+                  -
+                </button>
               </div>
             </div>
             <div className={styles.percentage}>
@@ -204,11 +273,43 @@ export const OrderBlock = () => {
                 type='number'
                 placeholder='Price'
                 className={styles.input}
+                value={secondLimit.from}
+                onKeyDown={blockInvalidChar}
+                onChange={(e) => {
+                  const { to } = secondLimit;
+                  const limitFrom = e.target.value;
+                  setSecondLimit({
+                    to,
+                    from: limitFrom ? Number(limitFrom) : null,
+                  });
+                }}
               />
               <div className={styles.currency}>USDT</div>
               <div className={styles.buttons}>
-                <button>+</button>
-                <button>-</button>
+                <button
+                  onClick={() => {
+                    const { to } = secondLimit;
+                    const from = secondLimit.from + 1;
+                    setSecondLimit({
+                      to,
+                      from,
+                    });
+                  }}
+                >
+                  +
+                </button>
+                <button
+                  onClick={() => {
+                    const { to } = secondLimit;
+                    const from = secondLimit.from - 1;
+                    setSecondLimit({
+                      to,
+                      from,
+                    });
+                  }}
+                >
+                  -
+                </button>
               </div>
             </div>
             <div className={styles.inputContainer}>
@@ -216,11 +317,43 @@ export const OrderBlock = () => {
                 type='number'
                 placeholder='Price'
                 className={styles.input}
+                value={secondLimit.to}
+                onKeyDown={blockInvalidChar}
+                onChange={(e) => {
+                  const { from } = secondLimit;
+                  const limitTo = e.target.value;
+                  setSecondLimit({
+                    from,
+                    to: limitTo ? Number(limitTo) : null,
+                  });
+                }}
               />
               <div className={styles.currency}>USDT</div>
               <div className={styles.buttons}>
-                <button>+</button>
-                <button>-</button>
+                <button
+                  onClick={() => {
+                    const { from } = secondLimit;
+                    const to = secondLimit.to + 1;
+                    setSecondLimit({
+                      to,
+                      from,
+                    });
+                  }}
+                >
+                  +
+                </button>
+                <button
+                  onClick={() => {
+                    const { from } = secondLimit;
+                    const to = secondLimit.to - 1;
+                    setSecondLimit({
+                      to,
+                      from,
+                    });
+                  }}
+                >
+                  -
+                </button>
               </div>
             </div>
             <div className={styles.percentage}>
