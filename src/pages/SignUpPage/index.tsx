@@ -7,6 +7,8 @@ import { ReactComponent as EyeOff } from 'assets/img/eye-off.svg';
 export const SignUpPage = ({ signIn }: any) => {
   const [showPassword, setShowPassword] = useState(false);
   const [data, setData] = useState({ password: null, email: null });
+  const [isAgree, setIsAgree] = useState(true);
+  
   return (
     <div className={styles.logInContainer}>
       <div className={styles.signIn}>
@@ -68,7 +70,18 @@ export const SignUpPage = ({ signIn }: any) => {
       <div className={styles.checkContainer}>
         <div className={styles.check}></div>
         <div className={styles.terms}>
-          I have read and agree to the <span>Terms of Use.</span>
+          <input
+            type='checkbox'
+            id='terms'
+            className={`${styles.check} ${isAgree ? styles.checked : ''}`}
+            onClick={() => {
+              setIsAgree(!isAgree);
+            }}
+            checked={isAgree}
+          />
+          <label htmlFor='terms'>
+            I have read and agree to the <span>Terms of Use.</span>
+          </label>
         </div>
       </div>
       <div className={styles.button}>Sign Up</div>

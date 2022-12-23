@@ -98,23 +98,47 @@
     margin: 0 0 29px 0;
     display: flex;
     align-items: center;
-    .check {
-      cursor: pointer;
-      user-select: none;
-      width: 14px;
-      height: 14px;
-      margin: 0 10px 0 0;
-      background-image: url('../../assets/img/check.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
+    .terms {
+      display: flex;
+      align-items: center;
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      color: rgba(255, 255, 255, 0.6);
+      position: relative;
+      & .check {
+        visibility: hidden;
+      }
+      .check + label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 14px;
+        width: 14px;
+        display: inline-block;
+        border: 1px solid #333;
+      }
+      .check:checked + label:before {
+        content: '';
+        background: rgb(0, 0, 0);
+        background-image: url('../../assets/img/check.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      label {
+        cursor: pointer;
+        user-select: none;
+        padding: 0 0 0 4px;
+      }
     }
     .terms {
       font-weight: 500;
       font-size: 15px;
       line-height: 18px;
       letter-spacing: 0.02em;
-
       color: rgba(255, 255, 255, 0.6);
       span {
         color: #7f75e3;

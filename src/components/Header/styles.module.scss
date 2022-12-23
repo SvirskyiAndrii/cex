@@ -6,7 +6,10 @@
   font-size: 14px;
   background: #161631;
   margin-bottom: 3px;
-
+  .logo {
+    cursor: pointer;
+    user-select: none;
+  }
   .infoBlock {
     .positive {
       color: #0c9e12;

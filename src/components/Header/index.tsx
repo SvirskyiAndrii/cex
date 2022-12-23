@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { renderNumber, getPriceOdds } from 'utils';
 import styles from './styles.module.scss';
 import { Modal } from 'components/Modal';
-import { SignInPage } from 'pages/SignInPage';
-import { SignUpPage } from 'pages/SignUpPage';
+import { SignInPage } from 'pages/signInPage';
+import { SignUpPage } from 'pages/signUpPage';
+import { useNavigate } from 'react-router-dom';
 
 type HeaderData = {
   price: null | string;
@@ -24,6 +25,7 @@ export const Header = () => {
     prevPrice: null,
   });
   const [modalType, setModalType] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -43,7 +45,14 @@ export const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <div>logo</div>
+        <div
+          className={styles.logo}
+          onClick={() => {
+            navigate('/cex');
+          }}
+        >
+          logo
+        </div>
         <div>
           <span>()</span>
           BTC / USDT
@@ -94,6 +103,7 @@ export const Header = () => {
               signUp={() => {
                 setModalType('sign-up');
               }}
+              setModalType={setModalType}
             />
           )}
           {modalType === 'sign-up' && (

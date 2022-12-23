@@ -3,16 +3,18 @@ import styles from './styles.module.scss';
 import { Input } from 'components/Input';
 import { ReactComponent as Eye } from 'assets/img/eye.svg';
 import { ReactComponent as EyeOff } from 'assets/img/eye-off.svg';
+import { useNavigate } from 'react-router-dom';
 
 const users = [
   { email: 'user@gmail.com', password: 'password' },
   { email: 'email@gmail.com', password: '!password' },
 ];
 
-export const SignInPage = ({ signUp }: any) => {
+export const SignInPage = ({ signUp, setModalType }: any) => {
   const [showPassword, setShowPassword] = useState(false);
   const [data, setData] = useState({ password: null, email: null });
   const [errors, setErrors] = useState<any>({ password: null, email: null });
+  const navigate = useNavigate();
 
   const logIn = () => {
     const isExist = users.find((user) => {
@@ -28,7 +30,8 @@ export const SignInPage = ({ signUp }: any) => {
         setErrors({ password: 'Wrong password', email });
       } else {
         setData({ password: null, email: null });
-        alert('SUCCESS LOG IN');
+        setModalType(null);
+        navigate('/balance');
       }
     }
   };
