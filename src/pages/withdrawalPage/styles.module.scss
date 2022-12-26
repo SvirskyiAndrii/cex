@@ -1,0 +1,261 @@
+.container {
+  height: calc(100vh - 100px);
+  padding: 32px 0 0 30px;
+  background: #161631;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  .title {
+    margin: 0 0 19px 0;
+  }
+
+  .coinContainer {
+    margin: 0 0 50px 0;
+    .coinTitle {
+      margin: 0 0 9px 0;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .select {
+      display: flex;
+      align-items: center;
+      .input {
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 274px;
+        height: 37px;
+        margin: 0 10px 0 0;
+        background: #24244f;
+        border-radius: 3px;
+        .img {
+          display: block;
+          width: 27px;
+          height: 27px;
+          margin: 0 10px 0 5px;
+          border: 1px solid white;
+        }
+        .inputTitle {
+          margin: 0 6px 0 0;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.9);
+        }
+        .inputSubtitle {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: rgba(255, 255, 255, 0.6);
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 13px;
+          height: 6.5px;
+          background-image: url('../../assets/img/arrow-down.svg');
+          background-position: center;
+          background-size: cover;
+          right: 15.5px;
+        }
+      }
+      .label {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+    .coinDropdown {
+      display: none;
+    }
+  }
+
+  .withdrawToContainer {
+    .labels {
+      display: flex;
+      margin: 0 0 19px 0;
+      & div:nth-child(1) {
+        margin: 0 30px 0 0;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      & div:nth-child(2) {
+        margin: 0 20px 0 0;
+        color: #22bc7b;
+      }
+      & div:nth-child(3) {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+    .walletAddress {
+      margin: 0 0 30px 0;
+      .walletAddressLabel {
+        display: block;
+        margin: 0 0 9px 0;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      & .inputContainer {
+        position: relative;
+        width: 274px;
+        .addressInput {
+          width: calc(274px - 30px);
+          height: 37px;
+          padding: 0 15px;
+          background: #24244f;
+          border-radius: 3px;
+          font-family: 'Roboto';
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+          letter-spacing: 0.02em;
+          color: rgba(255, 255, 255, 0.6);
+          outline: none;
+          border: none;
+          &::placeholder {
+            font-family: 'Roboto';
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+        .icon {
+          cursor: pointer;
+          user-select: none;
+          position: absolute;
+          top: 8px;
+          right: 9px;
+          width: 20px;
+          height: 20px;
+          background-image: url('../../assets/img/copy.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    .net {
+      margin: 0 0 30px 0;
+      .netLabel {
+        display: block;
+        margin: 0 0 9px 0;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      & .inputContainer {
+        width: 274px;
+        position: relative;
+        .netInput {
+          width: calc(274px - 30px);
+          height: 37px;
+          padding: 0 15px;
+          background: #24244f;
+          border-radius: 3px;
+          font-family: 'Roboto';
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+          letter-spacing: 0.02em;
+          color: rgba(255, 255, 255, 0.6);
+          outline: none;
+          border: none;
+          &::placeholder {
+            font-family: 'Roboto';
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          position: absolute;
+          top: 15px;
+          right: 15.5px;
+          width: 13px;
+          height: 6.5px;
+          background-image: url('../../assets/img/arrow-down.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      .netDropdown {
+        display: none;
+      }
+    }
+  }
+
+  .outputContainer {
+    width: 35%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 29px 0;
+    margin: 0 0 43px 0;
+    .availableBalance {
+      .availableBalanceTitle {
+        margin: 0 0 9px 0;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .availableCurrency {
+        display: flex;
+        align-items: center;
+        & div {
+          margin: 0 15px 0 0;
+          font-family: 'Akshar';
+          color: rgba(255, 255, 255, 0.8);
+        }
+        & button {
+          cursor: pointer;
+          user-select: none;
+          border: none;
+          background: none;
+          color: #22bc7b;
+          font-family: 'Roboto';
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+    .minimumWithdrawal,
+    .commissions,
+    .remaining {
+      & div:nth-child(1) {
+        margin: 0 0 9px 0;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      & div:nth-child(2) {
+        font-family: 'Akshar';
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+  .confirm {
+    width: 269px;
+    height: 37px;
+    background: #5b549d;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
